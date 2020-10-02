@@ -8,5 +8,4 @@ module cadeado(
 
 assign aberto = a & b & c & d;
 
-
 endmodule
