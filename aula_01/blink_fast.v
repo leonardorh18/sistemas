@@ -1,6 +1,6 @@
 module blinker (
 
-    input CLOCK_50,
+    input CLOCK_50, // assign CLOCK_50 = clk;
     output [1:0] LEDG
     
 );

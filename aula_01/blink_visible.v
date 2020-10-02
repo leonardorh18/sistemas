@@ -16,16 +16,32 @@ module blinker (
     assign LEDG = state;
     
     /* always */
-    always @ (posedge CLOCK_50) begin
+    always @ (CLOCK_50) begin
         if (counter == 10 )
         begin
             counter <= 0;
-            state <= ~state;
+            // state <= ~state;
         end
         else begin
             counter <= counter + 1;
         end
     end
+
+
+    /* always */
+    always @ (negedge CLOCK_50) begin
+        if (counter == 10 )
+        begin
+            // counter <= 0;
+            state <= ~state;
+        end
+        else begin
+            // counter <= counter + 1;
+        end
+    end
+
+
+    
 
 endmodule
 
